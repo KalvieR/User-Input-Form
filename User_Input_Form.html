@@ -7,6 +7,34 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+    .required::after {
+        content: "*";
+        color: red;
+        font-size: 1.5em;
+    }
+    h1 {
+        font-size: 33px;
+        color: #424242;
+        text-align: left;
+        text-align: center;
+        margin-bottom: 20px;
+        font-family: "Mukta", sans-serif;
+        font-weight: 800;
+        font-style: normal;
+        background-color: #FFC9AB;
+        padding: 5px 15px;
+        border-radius: 4px;
+
+        width: 310px;
+        height: 40px;
+
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    </style>
+    
     </head>
     <body>
         <h1>Volunteer Teaching</h1>
@@ -41,7 +69,25 @@
                             <option value="10/07/2024">10/07/2024</option>
                             <option value="26/06/2024">26/06/2024</option>
                         </select>
-
+                        <div>
+                            <label for="locations">Locations<span class="required"></span></label>
+                            <br>
+                            <select id="locations" name="locations">
+                                <optgroup label="Dwarka">
+                                    <option value="Sec-2">Sec-2</option>
+                                    <option value="Sec-3">Sec-3</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="myTextarea">Why this internship?<span class="required"></span></label>
+                            <br>
+                            <textarea id="myTextarea" name="myTextarea" rows="4" cols="50" minlength="100" maxlength="700" required></textarea><br>
+                        </div>
+                        <div>
+                            <button type="submit">Join Us</button>
+                        </div>
 
                 </form>
             </fieldset>
